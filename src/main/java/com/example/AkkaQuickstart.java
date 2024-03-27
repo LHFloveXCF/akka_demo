@@ -7,7 +7,9 @@ public class AkkaQuickstart {
   public static void main(String[] args) {
     //#actor-system
     final ActorSystem<GreeterMain.SayHello> greeterMain = ActorSystem.create(GreeterMain.create(), "helloakka");
-    //#actor-system
+
+      System.out.println(greeterMain);
+      //#actor-system
 
     //#main-send-messages
     greeterMain.tell(new GreeterMain.SayHello("Charles"));
